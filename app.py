@@ -188,8 +188,8 @@ The spiral arms are sites of ongoing star formation and are brighter than the su
 Roughly 2/3 of all spirals are observed to have a bar-like structure, with the bar extending from the central bulge, and the arms begin at the ends of the bar. The proportion of barred spirals relative to barless spirals has increased over the history of the universe: only 10% contained bars 8 billion years ago. \
 The Milky Way is a barred spiral (SBc), although the bar itself is difficult to observe from Earth\'s current position within the galactic disc.')
 
-sbaspiral = Image.open('galaxy_images/sbasbb.png')
-st.image(sbspiral,use_column_width=True)
+bspiral = Image.open('galaxy_images/bspiral.png')
+st.image(bspiral,use_column_width=True)
 
 st.header('A few examples of barred spiral galaxies')
 st.subheader('First type : SBa/SBb barred spiral galaxies')
@@ -205,4 +205,23 @@ st.image(sbbsbc,use_column_width=True, caption = "On the left : the Milky Way, a
 st.subheader('First type : SBc/SBd barred spiral galaxies')
 st.markdown('SBc/SBd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
 sbcsbd = Image.open('galaxy_images/sbcsbd.png')
-st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design SBb galaxy")
+st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
+
+#if Hubble == irr
+
+st.title('Irregular Galaxies')
+st.header('About them')
+st.markdown('Galaxies that do not fit into the Hubble sequence because they have no regular structure (either disk-like or ellipsoidal) are irregular galaxies. They are often chaotic in appearance: they have an asymmetric profile and lack a central bulge or obvious spiral structure. Instead, they contain many individual clusters of young stars. \
+    They are thought to make up about a quarter of all galaxies. Some irregular galaxies were once spiral or elliptical galaxies but were deformed by an uneven external gravitational force. Irregular galaxies may contain abundant amounts of gas and dust. \
+    Irregular galaxies are commonly small, about one tenth the mass of the Milky Way galaxy (our galaxy!). Due to their small sizes, they are prone to environmental effects like crashing with large galaxies and intergalactic clouds. \
+    ')
+
+irr = Image.open('galaxy_images/irr.png')
+st.image(irr,use_column_width=True)
+
+st.header('Have a look at these impressive examples of other irregular galaxies:')
+
+irregulars = Image.open('galaxy_images/irregulars.png')
+st.image(irregulars,use_column_width=True)
+
+
