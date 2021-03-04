@@ -1,4 +1,7 @@
 
+import streamlit as st
+from PIL import Image
+
 def result_galaxy(galaxy):
 
     if galaxy == "E0-E2":
