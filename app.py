@@ -3,9 +3,7 @@ from PIL import Image
 import requests
 import io
 from result_galaxy import result_galaxy
-
-
-##Design, couleurs
+import time
 
 
 #Titre
@@ -28,23 +26,25 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Beautiful ! Now, let\'s classify it...', use_column_width=True)
 
-    # image.__dict__
 
     # convert imge to bytes
     img_byte_arr = io.BytesIO()
     image.save(img_byte_arr, format='JPEG')
     img_byte_arr = img_byte_arr.getvalue()
 
-    # with open("image.jpg", "wb") as f:
-    #     f.write(img_byte_arr)
 
-    #API Call
+
+
+    #API Call, url de prod :
     url = 'https://hamster-ev6iq3m3na-ew.a.run.app/uploadfile'
+    #url local pour tester :
+    #url = 'http://localhost:8000/uploadfile'
     files = {'file': img_byte_arr}
     response = requests.post(url, files=files)
     if response.status_code == 200:
         resp = response.json()
-        value = resp["denom"]
+
+        value = resp["hubble"]
         result_galaxy(value)
 
 
@@ -53,19 +53,19 @@ if uploaded_file is not None:
 
 
 #Wait time
-if st.checkbox('Show progress bar'):
-    import time
+# if st.checkbox('Show progress bar'):
+#     import time
 
-    'Starting a long computation...'
+#     'Starting a long computation...'
 
-    # Add a placeholder
-    latest_iteration = st.empty()
-    bar = st.progress(0)
+#     # Add a placeholder
+#     latest_iteration = st.empty()
+#     bar = st.progress(0)
 
-    for i in range(100):
-        # Update the progress bar with each iteration.
-        latest_iteration.text(f'Iteration {i+1}')
-        bar.progress(i + 1)
-        time.sleep(0.1)
+#     for i in range(100):
+#         # Update the progress bar with each iteration.
+#         latest_iteration.text(f'Iteration {i+1}')
+#         bar.progress(i + 1)
+#         time.sleep(0.1)
 
-    '...and now we\'re done!'
+#     '...and now we\'re done!'
