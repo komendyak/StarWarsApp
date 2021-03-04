@@ -45,6 +45,7 @@ if uploaded_file is not None:
     if response.status_code == 200:
         resp = response.json()
         value = resp["hubble"]
+        result_galaxy(value)
 
 
     else:

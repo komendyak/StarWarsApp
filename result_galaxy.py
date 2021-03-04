@@ -1,8 +1,7 @@
 
+def result_galaxy(galaxy):
 
-def result_galaxy(pred):
-
-    if value == "E0-E2":
+    if galaxy == "E0-E2":
 
         st.title('Elliptical Galaxies : E0-E2')
 
@@ -23,7 +22,7 @@ def result_galaxy(pred):
         E1 = Image.open('galaxy_images/E0-E2.png')
         st.image(E1,use_column_width=True)
 
-    if value == "E3-E5":
+    if galaxy == "E3-E5":
 
         st.title('Elliptical Galaxies : E3-E5')
 
@@ -45,7 +44,7 @@ def result_galaxy(pred):
         st.image(E3,use_column_width=True)
 
 
-    if value == "E6-E7":
+    if galaxy == "E6-E7":
 
         st.title('Elliptical Galaxies : E6-E7')
 
@@ -68,7 +67,7 @@ def result_galaxy(pred):
 
 
 
-    if value == "S0" or value == "SB0":
+    if galaxy == "S0" or value == "SB0":
 
         st.title('Lenticular Galaxies : S0 and SB0')
 
@@ -91,7 +90,7 @@ def result_galaxy(pred):
 
 
 
-    if value == "Sa/Sb" or value == "Sb/Sc" or value == "ScSd":
+    if galaxy == "Sa/Sb" or value == "Sb/Sc" or value == "ScSd":
 
         st.title('Spiral Galaxies : Sa/Sb, Sb/Sc, Sc/Sd')
 
@@ -126,7 +125,7 @@ def result_galaxy(pred):
         st.image(scsd,use_column_width=True, caption="Left and middle: BX442, the oldest known spiral galaxy today.")
 
 
-    if value == "SBa/SBb" or value == "SBb/SBc" or value == "SBcSBd":
+    if galaxy == "SBa/SBb" or value == "SBb/SBc" or value == "SBcSBd":
 
         st.title('Barred Spiral Galaxies : SBa/SBb, SBb/SBc, SBc/SBd')
 
@@ -157,7 +156,7 @@ def result_galaxy(pred):
         sbcsbd = Image.open('galaxy_images/sbcsbd.png')
         st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
 
-    if value == "irregular" or value == "merger":
+    if galaxy == "irregular" or value == "merger":
 
         st.title('Irregular Galaxies')
 
@@ -177,13 +176,13 @@ def result_galaxy(pred):
         irregulars = Image.open('galaxy_images/irregulars.png')
         st.image(irregulars,use_column_width=True)
 
-    if value == "dust lane" or value == "lens or an arc":
+    if galaxy == "dust lane" or value == "lens or an arc":
         st.title('I am sorry but ...')
         st.header("... we cannot identify a galaxy there.")
         st.markdown("Or maybe the telescope that took the picture was not perfectly clean, or captured other elements.")
 
 
-    if value == "ring":
+    if galaxy == "ring":
         st.title("Ring galaxies")
 
         st.markdown('It looks like your galaxy is a ring galaxy. It has a visible ring with no bulge, but it does not belong to the Hubble sequence. Read below to learn more.')
