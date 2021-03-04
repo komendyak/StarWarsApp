@@ -67,7 +67,7 @@ def result_galaxy(galaxy):
 
 
 
-    if galaxy == "S0" or value == "SB0":
+    if galaxy == "S0" or galaxy == "SB0":
 
         st.title('Lenticular Galaxies : S0 and SB0')
 
@@ -90,7 +90,7 @@ def result_galaxy(galaxy):
 
 
 
-    if galaxy == "Sa/Sb" or value == "Sb/Sc" or value == "ScSd":
+    if galaxy == "Sa/Sb" or galaxy == "Sb/Sc" or galaxy == "ScSd":
 
         st.title('Spiral Galaxies : Sa/Sb, Sb/Sc, Sc/Sd')
 
@@ -125,7 +125,7 @@ def result_galaxy(galaxy):
         st.image(scsd,use_column_width=True, caption="Left and middle: BX442, the oldest known spiral galaxy today.")
 
 
-    if galaxy == "SBa/SBb" or value == "SBb/SBc" or value == "SBcSBd":
+    if galaxy == "SBa/SBb" or galaxy == "SBb/SBc" or galaxy == "SBcSBd":
 
         st.title('Barred Spiral Galaxies : SBa/SBb, SBb/SBc, SBc/SBd')
 
@@ -156,11 +156,11 @@ def result_galaxy(galaxy):
         sbcsbd = Image.open('galaxy_images/sbcsbd.png')
         st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
 
-    if galaxy == "irregular" or value == "merger":
+    if galaxy == "irregular" or galaxy == "merger":
 
         st.title('Irregular Galaxies')
 
-    st.markdown('Congrats, your galaxy is irregular according to the Hubble sequence. They don\'t have main characteristics, appart from looking quite chaotic and having no identified features. Read below to learn more.')
+        st.markdown('Congrats, your galaxy is irregular according to the Hubble sequence. They don\'t have main characteristics, appart from looking quite chaotic and having no identified features. Read below to learn more.')
 
         st.header('About them')
         st.markdown('Galaxies that do not fit into the Hubble sequence because they have no regular structure (either disk-like or ellipsoidal) are irregular galaxies. They are often chaotic in appearance: they have an asymmetric profile and lack a central bulge or obvious spiral structure. Instead, they contain many individual clusters of young stars. \
@@ -176,7 +176,7 @@ def result_galaxy(galaxy):
         irregulars = Image.open('galaxy_images/irregulars.png')
         st.image(irregulars,use_column_width=True)
 
-    if galaxy == "dust lane" or value == "lens or an arc":
+    if galaxy == "dust lane" or galaxy == "lens or an arc":
         st.title('I am sorry but ...')
         st.header("... we cannot identify a galaxy there.")
         st.markdown("Or maybe the telescope that took the picture was not perfectly clean, or captured other elements.")
