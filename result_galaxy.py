@@ -6,8 +6,7 @@ def result_galaxy(pred):
 
         st.title('Elliptical Galaxies : E0-E2')
 
-        st.markdown('Congrats, your galaxy is an E0-E2 class according to the Hubble sequence.')
-
+        st.markdown('Congrats, your galaxy is elliptical (E0-E2) according to the Hubble sequence. Its main characteristics are : no disk, a smooth rounded look. Read below to learn more.')
 
         st.header('About them')
         st.markdown('Elliptical galaxies have smooth, featureless light distributions and appear as ellipses. \
@@ -27,6 +26,9 @@ def result_galaxy(pred):
     if value == "E3-E5":
 
         st.title('Elliptical Galaxies : E3-E5')
+
+        st.markdown('Congrats, your galaxy is elliptical (E3-E5) according to the Hubble sequence. Its main characteristics are : no disk, a smooth quite rounded look. Read below to learn more.')
+
         st.header('About them')
         st.markdown('Elliptical galaxies have smooth, featureless light distributions and appear as ellipses. \
         The ellipticity increases from left to right on the Hubble diagram, with near-circular (E0) galaxies situated on the very left of the diagram to the most flattened elliptical galaxies (E7) with a cigar shape. \
@@ -46,6 +48,9 @@ def result_galaxy(pred):
     if value == "E6-E7":
 
         st.title('Elliptical Galaxies : E6-E7')
+
+        st.markdown('Congrats, your galaxy is elliptical (E6-E7) according to the Hubble sequence. Its main characteristics are : no disk, a smooth cigar shape. Read below to learn more.')
+
         st.header('About them')
         st.markdown('Elliptical galaxies have smooth, featureless light distributions and appear as ellipses. \
         The ellipticity increases from left to right on the Hubble diagram, with near-circular (E0) galaxies situated on the very left of the diagram to the most flattened elliptical galaxies (E7) with a cigar shape. \
@@ -66,6 +71,9 @@ def result_galaxy(pred):
     if value == "S0" or value == "SB0":
 
         st.title('Lenticular Galaxies : S0 and SB0')
+
+        st.markdown('Congrats, your galaxy is lenticular (S0) according to the Hubble sequence. Its main characteristics are : a visible disk and no arms. Read below to learn more.')
+
         st.header('About them')
         st.markdown('A lenticular galaxy  is a type of galaxy intermediate between an elliptical and a spiral galaxy. It contains a large-scale disc but does not have large-scale spiral arms. They have much higher bulge-to-disk ratios than typical spirals. \
             When simply looking at a galaxy\'s image, lenticular galaxies with relatively face-on disks are difficult to distinguish from ellipticals of type E0–E3 (rounded), making the classification of many such galaxies uncertain. \
@@ -86,6 +94,10 @@ def result_galaxy(pred):
     if value == "Sa/Sb" or value == "Sb/Sc" or value == "ScSd":
 
         st.title('Spiral Galaxies : Sa/Sb, Sb/Sc, Sc/Sd')
+
+        st.markdown('Congrats, your galaxy is a spiral according to the Hubble sequence. Its main characteristics are : visible arms around a bulge. Read below to learn more.')
+
+
         st.header('About them')
         st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
             The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. \
@@ -117,6 +129,9 @@ def result_galaxy(pred):
     if value == "SBa/SBb" or value == "SBb/SBc" or value == "SBcSBd":
 
         st.title('Barred Spiral Galaxies : SBa/SBb, SBb/SBc, SBc/SBd')
+
+        st.markdown('Congrats, your galaxy is a barred spiral according to the Hubble sequence. Its main characteristics are : visible arms around a bulge and a bar feature. Read below to learn more.')
+
         st.header('About them')
         st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
         The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. Together with irregular galaxies, spiral galaxies make up approximately 60\% of galaxies in today\'s universe. \
@@ -145,6 +160,9 @@ def result_galaxy(pred):
     if value == "irregular" or value == "merger":
 
         st.title('Irregular Galaxies')
+
+    st.markdown('Congrats, your galaxy is irregular according to the Hubble sequence. They don\'t have main characteristics, appart from looking quite chaotic and having no identified features. Read below to learn more.')
+
         st.header('About them')
         st.markdown('Galaxies that do not fit into the Hubble sequence because they have no regular structure (either disk-like or ellipsoidal) are irregular galaxies. They are often chaotic in appearance: they have an asymmetric profile and lack a central bulge or obvious spiral structure. Instead, they contain many individual clusters of young stars. \
             They are thought to make up about a quarter of all galaxies. Some irregular galaxies were once spiral or elliptical galaxies but were deformed by an uneven external gravitational force. Irregular galaxies may contain abundant amounts of gas and dust. \
@@ -161,12 +179,15 @@ def result_galaxy(pred):
 
     if value == "dust lane" or value == "lens or an arc":
         st.title('I am sorry but ...')
-        st.header("... we cannot identify a galaxy.")
-        st.markdown("Or the telescope that took the picture was not perfectly clean.")
+        st.header("... we cannot identify a galaxy there.")
+        st.markdown("Or maybe the telescope that took the picture was not perfectly clean, or captured other elements.")
 
 
     if value == "ring":
         st.title("Ring galaxies")
+
+        st.markdown('It looks like your galaxy is a ring galaxy. It has a visible ring with no bulge, but it does not belong to the Hubble sequence. Read below to learn more.')
+
         st.header('About them')
         st.markdown("A ring galaxy is a galaxy with a circle-like appearance. Hoag's Object, discovered by Art Hoag in 1950, is an example of a ring galaxy. This galaxy does not fit in the Hubble classification.")
 
