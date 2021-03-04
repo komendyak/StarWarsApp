@@ -44,7 +44,7 @@ if uploaded_file is not None:
     response = requests.post(url, files=files)
     if response.status_code == 200:
         resp = response.json()
-        value = resp["hubble"]
+        value = resp["denom"]
         result_galaxy(value)
 
 
