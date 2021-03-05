@@ -6,14 +6,20 @@ from result_galaxy import result_galaxy
 import time
 
 
+#Background
 st.markdown("""
 <style>
+.block-container {
+    background-color: rgba(0,0,0,0.75);
+}
 body {
     color: #fff;
-    background-color: #111;
+    background-image: url("https://github.com/AurelSann/StarWars/blob/master/images/SWwallpaper.png?raw=true");
+    background-size: 350px !important;
 }
 </style>
     """, unsafe_allow_html=True)
+
 
 #Titre
 
