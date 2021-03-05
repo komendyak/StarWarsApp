@@ -15,7 +15,7 @@ st.markdown("""
 body {
     color: #fff;
     background-image: url("https://github.com/AurelSann/StarWars/blob/master/images/SWwallpaper.png?raw=true");
-    background-size: 350px !important;
+    background-size: 400px !important;
 }
 </style>
     """, unsafe_allow_html=True)
