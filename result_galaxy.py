@@ -324,7 +324,6 @@ def result_galaxy(galaxy):
         st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
 
 
-
     if galaxy == "irregular" or galaxy == "merger":
 
         st.title('Irregular Galaxies')
@@ -344,6 +343,7 @@ def result_galaxy(galaxy):
 
         irregulars = Image.open('galaxy_images/irregulars.png')
         st.image(irregulars,use_column_width=True)
+
 
     if galaxy == "dust lane" or galaxy == "lens or an arc":
         st.title('I am sorry but ...')
