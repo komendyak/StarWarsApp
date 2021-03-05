@@ -2,6 +2,17 @@
 import streamlit as st
 from PIL import Image
 
+
+st.markdown("""
+<style>
+body {
+    color: #fff;
+    background-color: #111;
+}
+</style>
+    """, unsafe_allow_html=True)
+
+
 def result_galaxy(galaxy):
 
     if galaxy == "E0-E2":
@@ -69,10 +80,9 @@ def result_galaxy(galaxy):
         st.image(E7,use_column_width=True)
 
 
+    if galaxy == "S0":
 
-    if galaxy == "S0" or galaxy == "SB0":
-
-        st.title('Lenticular Galaxies : S0 and SB0')
+        st.title('Lenticular Galaxies : S0')
 
         st.markdown('Congrats, your galaxy is lenticular (S0) according to the Hubble sequence. Its main characteristics are : a visible disk and no arms. Read below to learn more.')
 
@@ -92,12 +102,67 @@ def result_galaxy(galaxy):
         st.image(S0,use_column_width=True)
 
 
+    if galaxy == "SB0":
 
-    if galaxy == "Sa/Sb" or galaxy == "Sb/Sc" or galaxy == "ScSd":
+        st.title('Barred Lenticular Galaxies : SB0')
 
-        st.title('Spiral Galaxies : Sa/Sb, Sb/Sc, Sc/Sd')
+        st.markdown('Congrats, your galaxy is barred lenticular (SB0) according to the Hubble sequence. Its main characteristics are : a visible disk, a bar and no arms. Read below to learn more.')
 
-        st.markdown('Congrats, your galaxy is a spiral according to the Hubble sequence. Its main characteristics are : visible arms around a bulge. Read below to learn more.')
+        st.header('About them')
+        st.markdown('A lenticular galaxy  is a type of galaxy intermediate between an elliptical and a spiral galaxy. It contains a large-scale disc but does not have large-scale spiral arms. They have much higher bulge-to-disk ratios than typical spirals. \
+            When simply looking at a galaxy\'s image, lenticular galaxies with relatively face-on disks are difficult to distinguish from ellipticals of type E0–E3 (rounded), making the classification of many such galaxies uncertain. \
+            When viewed edge-on, the disk becomes more apparent. Lenticular galaxies are disc galaxies that have used or lost most of their interstellar matter and therefore have very little ongoing star formation. \
+         \
+            Like spiral galaxies, lenticular galaxies can possess a central bar structure.')
+
+        len_schema = Image.open('galaxy_images/len_schema.png')
+        st.image(len_schema,use_column_width=True)
+
+        st.header('A few examples of lenticular galaxies')
+
+        S0 = Image.open('galaxy_images/S0.png')
+        st.image(S0,use_column_width=True)
+
+
+    if galaxy == "Sa/Sb":
+
+        st.title('Spiral Galaxy : Sa/Sb')
+
+        st.markdown('Congrats, your galaxy is a Sa/Sb spiral according to the Hubble sequence. Its main characteristics are : visible tightly wound, smooth arms around a visible and bright bulge. Read below to learn more.')
+
+
+        st.header('About them')
+        st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
+            The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. \
+        Together with irregular galaxies, spiral galaxies make up approximately 60% of galaxies in today\'s universe. \
+        Roughly 2/3 of all spirals are observed to have a bar-like structure: the Milky Way is a barred spiral (SBc). \
+        The oldest spiral galaxy on file is BX442. At eleven billion years old, it is more than two billion years older than any previous discovery.')
+
+        spiral = Image.open('galaxy_images/spiral.png')
+        st.image(spiral,use_column_width=True)
+
+        st.header('A few examples of spiral galaxies')
+        st.subheader('First type : Sa/Sb spiral galaxies')
+        st.markdown('Sa/Sb spirals have tightly wound, smooth arms and a large, bright central bulge')
+        sasb = Image.open('galaxy_images/sasb.png')
+        st.image(sasb,use_column_width=True,caption="On the left, the Andromeda galaxy that will merge with the Milky Way in about 4 billion years.")
+
+        st.subheader('Second type : Sb/Sc spiral galaxies')
+        st.markdown('Sb/Sc have more loose wound spiral arms than Sba, resolving into individual stellar clusters and nebulae, and a smaller, fainter bulge')
+        sbsc = Image.open('galaxy_images/sbsc.png')
+        st.image(sbsc,use_column_width=True)
+
+
+        st.subheader('Third type : Sc/Sd spiral galaxies')
+        st.markdown('Sc/Sd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
+        scsd = Image.open('galaxy_images/scsd.png')
+        st.image(scsd,use_column_width=True, caption="Left and middle: BX442, the oldest known spiral galaxy today.")
+
+    if galaxy == "Sb/Sc":
+
+        st.title('Spiral Galaxy Sb/Sc')
+
+        st.markdown('Congrats, your galaxy is a Sb/Sc spiral according to the Hubble sequence. Its main characteristics are : quite loose wound arms around a large bulge. Read below to learn more.')
 
 
         st.header('About them')
@@ -128,11 +193,47 @@ def result_galaxy(galaxy):
         st.image(scsd,use_column_width=True, caption="Left and middle: BX442, the oldest known spiral galaxy today.")
 
 
-    if galaxy == "SBa/SBb" or galaxy == "SBb/SBc" or galaxy == "SBcSBd":
+    if galaxy == "Sc/Sd":
 
-        st.title('Barred Spiral Galaxies : SBa/SBb, SBb/SBc, SBc/SBd')
+        st.title('Spiral Galaxy Sc/Sd')
 
-        st.markdown('Congrats, your galaxy is a barred spiral according to the Hubble sequence. Its main characteristics are : visible arms around a bulge and a bar feature. Read below to learn more.')
+        st.markdown('Congrats, your galaxy is a Sc/Sd spiral according to the Hubble sequence. Its main characteristics are : visible loosely wound, fragmentary arms around a bulge, with light coming mostly from the arms. Read below to learn more.')
+
+
+        st.header('About them')
+        st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
+            The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. \
+        Together with irregular galaxies, spiral galaxies make up approximately 60% of galaxies in today\'s universe. \
+        Roughly 2/3 of all spirals are observed to have a bar-like structure: the Milky Way is a barred spiral (SBc). \
+        The oldest spiral galaxy on file is BX442. At eleven billion years old, it is more than two billion years older than any previous discovery.')
+
+        spiral = Image.open('galaxy_images/spiral.png')
+        st.image(spiral,use_column_width=True)
+
+        st.header('A few examples of spiral galaxies')
+        st.subheader('First type : Sa/Sb spiral galaxies')
+        st.markdown('Sa/Sb spirals have tightly wound, smooth arms and a large, bright central bulge')
+        sasb = Image.open('galaxy_images/sasb.png')
+        st.image(sasb,use_column_width=True,caption="On the left, the Andromeda galaxy that will merge with the Milky Way in about 4 billion years.")
+
+        st.subheader('Second type : Sb/Sc spiral galaxies')
+        st.markdown('Sb/Sc have more loose wound spiral arms than Sba, resolving into individual stellar clusters and nebulae, and a smaller, fainter bulge')
+        sbsc = Image.open('galaxy_images/sbsc.png')
+        st.image(sbsc,use_column_width=True)
+
+
+        st.subheader('Third type : Sc/Sd spiral galaxies')
+        st.markdown('Sc/Sd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
+        scsd = Image.open('galaxy_images/scsd.png')
+        st.image(scsd,use_column_width=True, caption="Left and middle: BX442, the oldest known spiral galaxy today.")
+
+
+
+    if galaxy == "SBa/SBb":
+
+        st.title('Barred Spiral Galaxy : SBa/SBb')
+
+        st.markdown('Congrats, your galaxy is a barred spiral SBa/SBb according to the Hubble sequence. Its main characteristics are : visible tightly wound, smooth arms and a large, bright central bulge and a bar feature. Read below to learn more.')
 
         st.header('About them')
         st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
@@ -158,6 +259,71 @@ def result_galaxy(galaxy):
         st.markdown('SBc/SBd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
         sbcsbd = Image.open('galaxy_images/sbcsbd.png')
         st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
+
+    if galaxy == "SBb/SBc":
+
+        st.title('Barred Spiral Galaxy : SBb/SBc')
+
+        st.markdown('Congrats, your galaxy is a barred spiral SBb/SBc according to the Hubble sequence. Its main characteristics are : visible quite loose wound spiral arms around a bulge and a bar feature. Read below to learn more.')
+
+        st.header('About them')
+        st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
+        The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. Together with irregular galaxies, spiral galaxies make up approximately 60\% of galaxies in today\'s universe. \
+        Roughly 2/3 of all spirals are observed to have a bar-like structure, with the bar extending from the central bulge, and the arms begin at the ends of the bar. The proportion of barred spirals relative to barless spirals has increased over the history of the universe: only 10% contained bars 8 billion years ago. \
+        The Milky Way is a barred spiral (SBc), although the bar itself is difficult to observe from Earth\'s current position within the galactic disc.')
+
+        bspiral = Image.open('galaxy_images/bspiral.png')
+        st.image(bspiral,use_column_width=True)
+
+        st.header('A few examples of barred spiral galaxies')
+        st.subheader('First type : SBa/SBb barred spiral galaxies')
+        st.markdown('Sba/SBb spirals have tightly wound, smooth arms and a large, bright central bulge')
+        sbasbb = Image.open('galaxy_images/sbasbb.png')
+        st.image(sbasbb,use_column_width=True)
+
+        st.subheader('First type : SBb/SBc barred spiral galaxies')
+        st.markdown('SBb/SBc have more loose wound spiral arms than SBa, resolving into individual stellar clusters and nebulae, and a smaller, fainter bulge')
+        sbbsbc = Image.open('galaxy_images/sbbsbc.png')
+        st.image(sbbsbc,use_column_width=True, caption = "On the left : the Milky Way, aka home.")
+
+        st.subheader('First type : SBc/SBd barred spiral galaxies')
+        st.markdown('SBc/SBd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
+        sbcsbd = Image.open('galaxy_images/sbcsbd.png')
+        st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
+
+
+    if galaxy == "SBc/SBd":
+
+        st.title('Barred Spiral Galaxy : SBc/SBd')
+
+        st.markdown('Congrats, your galaxy is a barred spiral SBc/SBd according to the Hubble sequence. Its main characteristics are : loosely wound, fragmentary arms, with most of the luminosity in the arms arms around a bulge and a visible bar feature. Read below to learn more.')
+
+        st.header('About them')
+        st.markdown('A spiral galaxy consists of a flattened disk (containing stars, gas and dust), with stars forming a spiral structure, and a central concentration of stars known as the bulge. \
+        The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young stars that inhabit them. Together with irregular galaxies, spiral galaxies make up approximately 60\% of galaxies in today\'s universe. \
+        Roughly 2/3 of all spirals are observed to have a bar-like structure, with the bar extending from the central bulge, and the arms begin at the ends of the bar. The proportion of barred spirals relative to barless spirals has increased over the history of the universe: only 10% contained bars 8 billion years ago. \
+        The Milky Way is a barred spiral (SBc), although the bar itself is difficult to observe from Earth\'s current position within the galactic disc.')
+
+        bspiral = Image.open('galaxy_images/bspiral.png')
+        st.image(bspiral,use_column_width=True)
+
+        st.header('A few examples of barred spiral galaxies')
+        st.subheader('First type : SBa/SBb barred spiral galaxies')
+        st.markdown('Sba/SBb spirals have tightly wound, smooth arms and a large, bright central bulge')
+        sbasbb = Image.open('galaxy_images/sbasbb.png')
+        st.image(sbasbb,use_column_width=True)
+
+        st.subheader('First type : SBb/SBc barred spiral galaxies')
+        st.markdown('SBb/SBc have more loose wound spiral arms than Sba, resolving into individual stellar clusters and nebulae, and a smaller, fainter bulge')
+        sbbsbc = Image.open('galaxy_images/sbbsbc.png')
+        st.image(sbbsbc,use_column_width=True, caption = "On the left : the Milky Way, aka home.")
+
+        st.subheader('First type : SBc/SBd barred spiral galaxies')
+        st.markdown('SBc/SBd spirals have very loosely wound, fragmentary arms, most of the luminosity is in the arms and not the bulge')
+        sbcsbd = Image.open('galaxy_images/sbcsbd.png')
+        st.image(sbcsbd,use_column_width=True, caption = "On the left, NGC 1300, a grand design galaxy")
+
+
 
     if galaxy == "irregular" or galaxy == "merger":
 
