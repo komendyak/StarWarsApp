@@ -6,18 +6,29 @@ from result_galaxy import result_galaxy
 import time
 
 
+st.markdown("""
+<style>
+body {
+    color: #fff;
+    background-color: #111;
+}
+</style>
+    """, unsafe_allow_html=True)
+
 #Titre
-st.title('**GalaxyFinder**')
-st.markdown("Hi there ! Let me show you galaxies. It's very simple.")
+
+st.title('**💫 GalaxyFinder 💫**')
+
+st.header("Hi there! Let me show you galaxies. It's very simple 🔭")
 
 #Explanation
-st.markdown("You just have to upload a galaxy picture on the File uploader below:")
+st.subheader("You just have to upload a 🌌 **galaxy picture** 🌌 in the file uploader below:")
 
 
 #File uploader
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-uploaded_file = st.file_uploader("Choose a galaxy image", type="jpg")
+uploaded_file = st.file_uploader(' ',type="jpg")
 
 if uploaded_file is not None:
 
@@ -36,7 +47,7 @@ if uploaded_file is not None:
 
 
     #API Call, url de prod :
-    url = 'https://hamster-ev6iq3m3na-ew.a.run.app/uploadfile'
+    url = 'https://galaxyfinder-mptzkkztqq-ew.a.run.app/uploadfile'
     #url local pour tester :
     #url = 'http://localhost:8000/uploadfile'
     files = {'file': img_byte_arr}
@@ -49,7 +60,7 @@ if uploaded_file is not None:
 
 
     else:
-        "ça marche pas"
+        "⭐️ Young padawan, a connection issue we seem to have. Retry you must. ⭐️"
 
 
 #Wait time
